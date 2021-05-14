@@ -1,0 +1,1118 @@
+{
+  "intents": [
+    {
+      "intent": "consultar_cep",
+      "examples": [
+        {
+          "text": "buscar cep"
+        },
+        {
+          "text": "buscar endereço"
+        },
+        {
+          "text": "cep"
+        },
+        {
+          "text": "endereço"
+        },
+        {
+          "text": "quero consultar um cep"
+        },
+        {
+          "text": "quero consultar um endereço"
+        },
+        {
+          "text": "quero ver o endereço de um cep"
+        },
+        {
+          "text": "saber onde uma pessoa morra"
+        },
+        {
+          "text": "saber uma rua"
+        },
+        {
+          "text": "saber um bairro"
+        },
+        {
+          "text": "saber um cep"
+        },
+        {
+          "text": "ver dados de um cep"
+        },
+        {
+          "text": "ver enderço"
+        }
+      ],
+      "description": "Usuário quer ver o endereço de um CEP."
+    },
+    {
+      "intent": "cpf",
+      "examples": [],
+      "description": "Usuário informou um CPF"
+    },
+    {
+      "intent": "despedida",
+      "examples": [
+        {
+          "text": "Adeus então"
+        },
+        {
+          "text": "Até mais então"
+        },
+        {
+          "text": "Hum, ok tchau então"
+        },
+        {
+          "text": "Muito obrigado"
+        },
+        {
+          "text": "Tchau"
+        },
+        {
+          "text": "Valeu"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "imprimir_fatura_luz",
+      "examples": [
+        {
+          "text": "Gostaria de imprimir a conta de luz"
+        },
+        {
+          "text": "Gostaria de imprimir a segunda via da fatura elétrica"
+        },
+        {
+          "text": "Imprimir a conta de luz"
+        },
+        {
+          "text": "Imprimir a fatura da energia elétrica"
+        },
+        {
+          "text": "Quero imprimir a fatura da energia elétrica"
+        },
+        {
+          "text": "Quero imprimir a fatura da luz"
+        },
+        {
+          "text": "Quero imprimir a segunda via da minha fatura de energia elétrica"
+        },
+        {
+          "text": "Quero imprimir o talão da luz"
+        }
+      ],
+      "description": "Usuário deseja imprimir a fatura da luz"
+    },
+    {
+      "intent": "ver_dados_fatura_agua",
+      "examples": [
+        {
+          "text": "água"
+        },
+        {
+          "text": "esgoto"
+        },
+        {
+          "text": "lixo"
+        },
+        {
+          "text": "qual é o valor da coleta de lixo"
+        },
+        {
+          "text": "qual é o valor da fatura da samae"
+        },
+        {
+          "text": "qual é o valor da fatura de água"
+        },
+        {
+          "text": "quanto é a taxa da água"
+        },
+        {
+          "text": "quanto é a taxa do esgoto"
+        },
+        {
+          "text": "quanto é a taxa do samae"
+        },
+        {
+          "text": "quero o valor da samae"
+        },
+        {
+          "text": "quero ver os dados da minha fatura de água"
+        },
+        {
+          "text": "samae"
+        }
+      ],
+      "description": "Usuário quer ver os dados da fatura da água"
+    },
+    {
+      "intent": "ver_dados_fatura_luz",
+      "examples": [
+        {
+          "text": "celesc"
+        },
+        {
+          "text": "Energia"
+        },
+        {
+          "text": "Energia elétrica"
+        },
+        {
+          "text": "Força"
+        },
+        {
+          "text": "Gostaria de obter a segunda via da minha fatura de energia elétrica"
+        },
+        {
+          "text": "Luz"
+        },
+        {
+          "text": "Preciso da segunda via da fatura da luz"
+        },
+        {
+          "text": "Preciso da segunda via da fatura de luz"
+        },
+        {
+          "text": "Quero a segunda via da energia elétrica"
+        },
+        {
+          "text": "Quero o talão da luz"
+        },
+        {
+          "text": "Talão da energia"
+        },
+        {
+          "text": "Talão da força"
+        },
+        {
+          "text": "Talão da luz"
+        }
+      ],
+      "description": "Usuário quer obter a segunda via da fatura de energia"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "cep",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "cep",
+          "patterns": [
+            "(\\d{5}\\-?\\d{3})"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "confirmacao",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "nao",
+          "synonyms": [
+            "negativo",
+            "nope"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "sim",
+          "synonyms": [
+            "ok",
+            "positivo",
+            "yes"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "cpf",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "cpf",
+          "patterns": [
+            "(\\d{3}\\.?\\d{3}\\.?\\d{3}-?\\d{2})"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "data_nascimento",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "data_nascimento",
+          "patterns": [
+            "(\\d{2}\\/\\d{2}\\/\\d{4})"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "nome",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "nome",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "samae",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "samae",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": []
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "webhooks": [
+    {
+      "url": "https://us-south.functions.appdomain.cloud/api/v1/web/lobokoch%40gmail.com_dev/default/chatbot.json",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá, eu sou o Kibot, o assistente virtual do Kerubin. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Para começarmos, por favor informe seu nome:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "nome": null
+      },
+      "conditions": "welcome",
+      "dialog_node": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eu não entendi. Você pode tentar reformular a frase."
+              },
+              {
+                "text": "Você pode reformular sua afirmação? Eu não estou entendendo."
+              },
+              {
+                "text": "Eu não entendi o sentido."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_9_1620350372097",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1620035046752",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1620035046762",
+      "previous_sibling": "handler_8_1620035046762"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_4_1620294093276",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1620294132630"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_2_1620478172931",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1620478213710",
+      "previous_sibling": "response_1_1620478514320"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "$nome, informe o CEP:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_10_1620478214232",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1620478214241",
+      "previous_sibling": "handler_3_1620478214241"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1620006177402",
+      "context": {
+        "data": "@data_nascimento.literal"
+      },
+      "conditions": "@data_nascimento.literal",
+      "event_name": "input",
+      "dialog_node": "handler_3_1620006177402"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1620478214232",
+      "context": {
+        "cep": "@cep.literal"
+      },
+      "conditions": "@cep.literal",
+      "event_name": "input",
+      "dialog_node": "handler_3_1620478214241"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "$nome, informe a Matrícula:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_9_1620772640148",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1620772640156",
+      "previous_sibling": "handler_7_1620772640156"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Informe o CPF do titular:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_2_1620002496437",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1620002496445",
+      "previous_sibling": "handler_6_1620002496445"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1620002496437",
+      "context": {
+        "cpf": "@cpf.literal"
+      },
+      "conditions": "@cpf.literal",
+      "event_name": "input",
+      "dialog_node": "handler_6_1620002496445"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Informe a data de nascimento do titular:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_5_1620006177402",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1620006177402",
+      "previous_sibling": "handler_3_1620006177402"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1620772640148",
+      "context": {
+        "samae": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_7_1620772640156"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_6_1620035046752",
+      "event_name": "input",
+      "dialog_node": "handler_8_1620035046762"
+    },
+    {
+      "type": "standard",
+      "title": "Confirma CPF e Data Nascimento",
+      "output": {
+        "generic": [
+          {
+            "title": "Confirma o CPF: $cpf e a Data de Nascimento: $data?",
+            "options": [
+              {
+                "label": "Sim",
+                "value": {
+                  "input": {
+                    "text": "sim"
+                  }
+                }
+              },
+              {
+                "label": "Não",
+                "value": {
+                  "input": {
+                    "text": "nao"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_3_1620002277268",
+      "conditions": "@confirmacao",
+      "dialog_node": "node_10_1620345953276"
+    },
+    {
+      "type": "standard",
+      "title": "Imprimir Fatura Sim",
+      "parent": "node_6_1620350935382",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "action": "luz-imprimir",
+            "numDoc": "$cpf",
+            "dtaNascimentoDoc": "$data"
+          },
+          "result_variable": "webhook_result_2"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@confirmacao:sim",
+      "dialog_node": "node_1_1620351538146"
+    },
+    {
+      "type": "standard",
+      "title": "Busca e mostra dados da fatura de água e esgoto",
+      "parent": "node_4_1620772568042",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "action": "samae",
+            "matricula": "$samae"
+          },
+          "result_variable": "webhook_result_4"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "true",
+      "dialog_node": "node_1_1620772791143"
+    },
+    {
+      "type": "frame",
+      "title": "Dados do CEP",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok $nome, buscando os dados do CEP: $cep ..."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#consultar_cep",
+      "dialog_node": "node_2_1620478172931",
+      "previous_sibling": "node_4_1620772568042"
+    },
+    {
+      "type": "frame",
+      "title": "Dados da fatura de luz",
+      "output": {
+        "generic": []
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1620345953276"
+      },
+      "conditions": "#ver_dados_fatura_luz",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_3_1620002277268",
+      "previous_sibling": "node_2_1620478172931"
+    },
+    {
+      "type": "standard",
+      "title": "pede_nome",
+      "output": {
+        "generic": [
+          {
+            "title": "Muito bem $nome, no momento eu consigo te ajudar com os assuntos abaixo. Por favor escolha um deles.",
+            "options": [
+              {
+                "label": "Consultar fatura de luz (SC)",
+                "value": {
+                  "input": {
+                    "text": "ver dados da fatura de luz"
+                  }
+                }
+              },
+              {
+                "label": "Consultar fatura de água (Samae Blumenau)",
+                "value": {
+                  "input": {
+                    "text": "ver dados da fatura de água"
+                  }
+                }
+              },
+              {
+                "label": "Pesquisar um endereço pelo CEP",
+                "value": {
+                  "input": {
+                    "text": "pesquisar endereço pelo CEP"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          },
+          {
+            "values": [
+              {
+                "text": "A qualquer momento você pode escrever \"tchau\" pra sair."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Bem-vindo",
+      "context": {
+        "nome": "<?input.text?>"
+      },
+      "conditions": "true",
+      "dialog_node": "node_4_1620294093276"
+    },
+    {
+      "type": "standard",
+      "title": "Imprimir Fatura Não",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sem problemas $nome..."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1620350935382",
+      "context": {
+        "cpf": null,
+        "data": null
+      },
+      "conditions": "@confirmacao:nao",
+      "dialog_node": "node_4_1620352152352",
+      "previous_sibling": "node_1_1620351538146"
+    },
+    {
+      "type": "frame",
+      "title": "Dados da fatura de água e esgoto",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok $nome, buscando valor da matrícula: $samae ..."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#ver_dados_fatura_agua",
+      "dialog_node": "node_4_1620772568042",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Exibir dados da fatura",
+      "parent": "node_10_1620345953276",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "action": "luz",
+            "numDoc": "$cpf",
+            "dtaNascimentoDoc": "$data"
+          },
+          "result_variable": "webhook_result_1"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "@confirmacao:sim",
+      "dialog_node": "node_6_1620031743333",
+      "previous_sibling": "node_6_1620348700496"
+    },
+    {
+      "type": "standard",
+      "title": "Não confirmou CPF e Data",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hum... ok $nome, sem  problemas."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1620345953276",
+      "context": {},
+      "conditions": "@confirmacao:nao",
+      "dialog_node": "node_6_1620348700496"
+    },
+    {
+      "type": "standard",
+      "title": "Imprimir Fatura",
+      "output": {
+        "generic": [
+          {
+            "title": "$nome, você quer o link para imprimir a fatura?",
+            "options": [
+              {
+                "label": "sim",
+                "value": {
+                  "input": {
+                    "text": "Sim"
+                  }
+                }
+              },
+              {
+                "label": "nao",
+                "value": {
+                  "input": {
+                    "text": "Não"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_6_1620031743333",
+      "conditions": "@confirmacao",
+      "dialog_node": "node_6_1620350935382"
+    },
+    {
+      "type": "standard",
+      "title": "Busca e mostra dados do CEP",
+      "parent": "node_2_1620478172931",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "cep": "$cep",
+            "action": "cep"
+          },
+          "result_variable": "webhook_result_3"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "true",
+      "dialog_node": "node_7_1620635034683"
+    },
+    {
+      "type": "standard",
+      "title": "Tchau",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Até logo $nome, foi  muito bom conversar com você, até breve ;-)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "cep": null,
+        "cpf": null,
+        "data": null,
+        "samae": null
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "Bem-vindo"
+      },
+      "conditions": "#despedida",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_9_1620350372097",
+      "previous_sibling": "node_3_1620002277268"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Ops! Algo saiu errado ao buscar seu CEP."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_6_1620031743333",
+      "conditions": "anything_else",
+      "dialog_node": "response_10_1620032701671",
+      "previous_sibling": "response_3_1620032701240"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_2_1620478172931",
+      "disabled": true,
+      "conditions": "anything_else",
+      "dialog_node": "response_1_1620478514320",
+      "previous_sibling": "response_5_1620478512940"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O valor da fatura é de R$ $webhook_result_1.valor com vencimento em $webhook_result_1.vencimento. $webhook_result_1.msg"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1620031743333",
+      "context": {},
+      "conditions": "$webhook_result_1",
+      "dialog_node": "response_3_1620032701240",
+      "previous_sibling": "slot_6_1620035046752"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "$nome, aqui está o endereço: $webhook_result_3.logradouro, $webhook_result_3.bairro, $webhook_result_3.localidade, $webhook_result_3.uf - $webhook_result_3.cep."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1620635034683",
+      "context": {
+        "cep": null
+      },
+      "conditions": "$webhook_result_3",
+      "dialog_node": "response_3_1620635064768"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Ops, algo deu errado!"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1620351538146",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1620350372097"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "response_5_1620351575084",
+      "previous_sibling": "response_9_1620351573750"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1620478172931",
+      "disabled": true,
+      "conditions": "$webhook_result_3",
+      "dialog_node": "response_5_1620478512940",
+      "previous_sibling": "node_7_1620635034683"
+    },
+    {
+      "type": "response_condition",
+      "parent": "node_7_1620635034683",
+      "conditions": "anything_else",
+      "dialog_node": "response_7_1620635066266",
+      "previous_sibling": "response_3_1620635064768"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Aqui está o valor da sua fatura de Água: $webhook_result_4.result."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1620772791143",
+      "context": {
+        "samae": null
+      },
+      "conditions": "$webhook_result_4",
+      "dialog_node": "response_7_1620772844474"
+    },
+    {
+      "type": "response_condition",
+      "parent": "node_1_1620772791143",
+      "conditions": "anything_else",
+      "dialog_node": "response_7_1620772845933",
+      "previous_sibling": "response_7_1620772844474"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "$nome, aqui está a URL para imprimir a fatura:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "$webhook_result_2.urlToPrint"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1620351538146",
+      "context": {
+        "cpf": null,
+        "data": null
+      },
+      "conditions": "$webhook_result_2",
+      "dialog_node": "response_9_1620351573750"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_2_1620478172931",
+      "variable": "$cep",
+      "dialog_node": "slot_10_1620478214232",
+      "previous_sibling": "handler_1_1620478213710"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_3_1620002277268",
+      "variable": "$cpf",
+      "dialog_node": "slot_2_1620002496437",
+      "previous_sibling": "node_10_1620345953276"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_3_1620002277268",
+      "variable": "$data",
+      "dialog_node": "slot_5_1620006177402",
+      "previous_sibling": "slot_2_1620002496437"
+    },
+    {
+      "type": "slot",
+      "parent": "node_6_1620031743333",
+      "dialog_node": "slot_6_1620035046752",
+      "previous_sibling": "node_6_1620350935382"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_4_1620772568042",
+      "variable": "$samae",
+      "dialog_node": "slot_9_1620772640148",
+      "previous_sibling": "node_1_1620772791143"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "LANCHONETE_FURB_TURMA2_CHATBOTS",
+  "language": "pt-br",
+  "description": ""
+}
