@@ -1,8 +1,8 @@
-# FURB - Pós datascience - Trabalho de ChatBots
+# FURB - Pós Data Science - Trabalho final de ChatBots
 ## Introdução
 Este documento trata-se do desenvolvimento de um trabalho final da disciplina de ChatBots da [Pós Graduação em Data Science da FURB](https://www.furb.br/web/5435/cursos/especializacao/cursos/cursos-em-andamento/data-science), solicitado pelo professor [Cristiano Roberto Franco](https://www.linkedin.com/in/crfranco/).
-O chatbot foi desenvolvido utilizando a atecnologia da [IBM Watson](https://www.ibm.com/br-pt/watson).
-Para acessar e interagir com chatbot desenvolvido para o trabalho, basta acessar o site: [www.kerubin.com.br](https://www.kerubin.com.br). Na base da página do site, no canto direito, clique no ícone: ![Icone do chatebot](https://github.com/lobokoch/chatbot/blob/main/chatbot_icone.png?raw=true). Funciona também para dispositivos mobile.
+O chatbot foi desenvolvido utilizando tecnologias de inteligência artificial do [IBM Watson](https://www.ibm.com/br-pt/watson), o qual aplica técnicas de entendimento de linguagem natural (NLU- Natural Language Understanding).
+Para acessar e interagir com chatbot desenvolvido para o trabalho, basta acessar o site: [www.kerubin.com.br](https://www.kerubin.com.br). Na base da página do site, no canto direito, clique no ícone: ![Icone do chatebot](https://github.com/lobokoch/chatbot/blob/main/chatbot_icone.png?raw=true). Funciona também para dispositivos móveis como celulares.
 
 ## Funcionamento
 O chat inícia se apresentado ao usuário e solicitando o seu nome para inciair o atendimento.
@@ -24,5 +24,25 @@ Abaixo segue o fluxograma detalhado do funcionamento do ChatBot:
 Clicando [aqui](https://raw.githubusercontent.com/lobokoch/chatbot/main/skill_chatbot.json) é possível visualizar o JSON da Skill do ChatBot no Watson da IBM.
 
 ## Estatísitcas com indicadores e métricas
-A seguir são exibidas informações com indicadores e métricas das conversas com o ChatBot:
- x
+A seguir são apresentados alguns indicadores e métricas das conversas com o ChatBot no período de 10/05/2021 até 14/05/2021.
+**Total de conversas: 55**
+**Média de mensagens por conversa: 5,04**
+**Maior conversa (em número de mensagens): 33**
+**Quantidade de mensagens mal entendidas pelo Bot: 50**
+
+Seguem alguns gráficos estatísitcos fornecidos pelo painel de gerenciamento do IBM Watson Assistent:
+
+**Total de cobertura no entendimento das mensgaens:**
+![grafico](https://raw.githubusercontent.com/lobokoch/chatbot/main/grafico_average.png)
+
+**Total de conversas no período:**
+![grafico](https://raw.githubusercontent.com/lobokoch/chatbot/main/grafico_total_conversations.png)
+
+**Média de mensagens por conversa (esquerda) e total de mensagens (direita):**
+![grafico](https://raw.githubusercontent.com/lobokoch/chatbot/main/grafico_avg_and_total_messages.png)
+
+**Total de usuários atívos (esquerda) e média de conversas por usuário (direita):**
+![grafico](https://raw.githubusercontent.com/lobokoch/chatbot/main/grafico_active_users_and_avg_conversa_user.png)
+
+## Considereções finais
+Desenvolver um ChatBot utilizando tecnologias de inteligência artificial como o IBM Watson, o qual aplica técnicas de entendimento de linguagem natural (NLU- Natural Language Understanding), é muito produtivo, relativamente simples e muito fácil de integrar com aplicativos e API externas utilizando Webhooks, os quais podem chamar as IBM functions ou AWS Lambdas, onde é possível orquestrar chamadas, em Python por exemplo, para qualquer outro sistema ou API externa com extrema facilidade.
