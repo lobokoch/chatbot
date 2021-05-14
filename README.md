@@ -25,10 +25,11 @@ Clicando [aqui](https://raw.githubusercontent.com/lobokoch/chatbot/main/skill_ch
 
 ## Estatísitcas com indicadores e métricas
 A seguir são apresentados alguns indicadores e métricas das conversas com o ChatBot no período de 10/05/2021 até 14/05/2021.
-**Total de conversas: 55**
-**Média de mensagens por conversa: 5,04**
-**Maior conversa (em número de mensagens): 33**
-**Quantidade de mensagens mal entendidas pelo Bot: 50**
+
+- **Total de conversas: 55**
+- **Média de mensagens por conversa: 5,04**
+- **Maior conversa (em número de mensagens): 33**
+- **Quantidade de mensagens mal entendidas pelo Bot: 50**
 
 Seguem alguns gráficos estatísitcos fornecidos pelo painel de gerenciamento do IBM Watson Assistent:
 
